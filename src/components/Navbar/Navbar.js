@@ -4,7 +4,7 @@ import { Link, Container } from "@mui/material";
 
 const Navbar = () => {
 	return (
-		<AppBar sx={{ bgcolor: "#fff", height: "3.5rem" }}>
+		<AppBar sx={{ bgcolor: "#fff", height: "3.5rem" }} position="static">
 			<Container
 				sx={{
 					display: "flex",
