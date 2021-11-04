@@ -1,0 +1,17 @@
+export const benefitOptions = [
+	{ id: 1, benefit: "Excellent Health Care" },
+	{ id: 2, benefit: "Daily Snacks" },
+	{ id: 3, benefit: "Group Activities" },
+	{ id: 4, benefit: "Volunteer Opportunity" },
+	{ id: 5, benefit: "Stock Options" },
+	{ id: 6, benefit: "Wellness Programs" },
+	{ id: 7, benefit: "Paid Time off" },
+	{ id: 8, benefit: "Life Insurance" },
+	{ id: 9, benefit: "Unlimited PTO" },
+	{ id: 10, benefit: "Tuition Reimbursement" },
+	{ id: 11, benefit: "Family and Medical Leave (FMLA)" },
+	{ id: 12, benefit: "Disability Insurance" },
+	{ id: 13, benefit: "Commuter Benefits" },
+	{ id: 14, benefit: "Retirement Savings" },
+	{ id: 15, benefit: "Other" },
+];
