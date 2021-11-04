@@ -10,14 +10,13 @@ import RadioButtonUncheckedIcon from "@mui/icons-material/RadioButtonUnchecked";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 
 const useStyles = makeStyles({
-	benefitsBtn: {
-		fontSize: ".8rem",
-		textTransform: "capitalize",
-	},
 	rightAlign: {
 		marginTop: "2rem",
 		width: "100%",
 		textAlign: "right",
+	},
+	gradientBg: {
+		backgroundImage: "linear-gradient(120deg, #2D3E8B, #9396FF)",
 	},
 });
 
@@ -64,7 +63,11 @@ const Benefits = () => {
 				<Button variant="outlined" sx={{ borderRadius: 16, px: 3, mx: 1 }}>
 					Skip
 				</Button>
-				<Button variant="contained" sx={{ borderRadius: 16, px: 3, mx: 1 }}>
+				<Button
+					variant="contained"
+					sx={{ borderRadius: 16, px: 3, mx: 1 }}
+					className={classes.gradientBg}
+				>
 					<span>Save</span>
 					<KeyboardArrowRightIcon />
 				</Button>
