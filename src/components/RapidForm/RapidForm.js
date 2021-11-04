@@ -46,7 +46,7 @@ const RapidForm = () => {
 							fullWidth
 							multiline
 							rows={4}
-							require
+							required
 						/>
 					</Box>
 

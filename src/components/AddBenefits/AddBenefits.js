@@ -1,6 +1,7 @@
 import { Container, Button } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useState } from "react";
+import Benefits from "../Benefits/Benefits";
 import RapidModal from "../Modal/RapidModal/RapidModal";
 
 const AddBenefits = () => {
@@ -20,7 +21,7 @@ const AddBenefits = () => {
 						alignItems: "center",
 					}}
 				>
-					<div textColor="warning">Benefits</div>
+					<div>Benefits</div>
 					<Button
 						onClick={handleOpen}
 						sx={{ borderRadius: 16 }}
@@ -32,6 +33,9 @@ const AddBenefits = () => {
 
 				{/* rapid modal */}
 				<RapidModal open={open} handleClose={handleClose} />
+
+				{/* Benefits */}
+				<Benefits />
 			</Box>
 		</Container>
 	);
