@@ -10,10 +10,11 @@ const style = {
 	position: "absolute",
 	top: "50%",
 	left: "50%",
+	overflowY: "scroll",
 	transform: "translate(-50%, -50%)",
 	width: "50%",
+	height: "85%",
 	bgcolor: "#fff",
-	border: "2px solid #ddd",
 	boxShadow: 24,
 	p: 4,
 };
@@ -23,11 +24,17 @@ const useStyles = makeStyles({
 		fontSize: "0.7rem",
 		textTransform: "capitalize",
 	},
+	modalFooterAlgn: {
+		marginTop: "2rem",
+		padding: "1rem",
+		width: "100%",
+		textAlign: "right",
+		borderTop: "1px solid #ddd",
+	},
 });
 
 const RapidModal = ({ open, handleClose }) => {
 	const classes = useStyles();
-
 	return (
 		<Modal open={open} onClose={handleClose}>
 			<Box sx={style}>
@@ -70,6 +77,16 @@ const RapidModal = ({ open, handleClose }) => {
 
 				{/* Benefits customize chance */}
 				<BenefitCustomize />
+
+				{/*  modal footer button*/}
+				<div className={classes.modalFooterAlgn}>
+					<Button variant="outlined" sx={{ borderRadius: 16, px: 4, mx: 2 }}>
+						Back
+					</Button>
+					<Button variant="contained" sx={{ borderRadius: 16, px: 4, mx: 2 }}>
+						Save
+					</Button>
+				</div>
 			</Box>
 		</Modal>
 	);

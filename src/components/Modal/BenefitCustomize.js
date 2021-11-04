@@ -6,6 +6,7 @@ import HomeIcon from "@mui/icons-material/Home";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { IconButton, Typography } from "@mui/material";
 import { Box } from "@mui/system";
+import CustomizeEditField from "./CustomizeEditField";
 
 const theme = createTheme({
 	typography: {
@@ -25,7 +26,6 @@ const BenefitCustomize = () => {
 			<Typography variant="h6" component="h2">
 				Benefits
 			</Typography>
-
 			{/* first item */}
 			<Box
 				sx={{
@@ -34,6 +34,7 @@ const BenefitCustomize = () => {
 					gap: 2,
 					bgcolor: "#f7f7f7",
 					my: 1,
+					p: 1,
 				}}
 			>
 				<TrackChangesIcon />
@@ -46,17 +47,16 @@ const BenefitCustomize = () => {
 				</Box>
 				<div>
 					<IconButton>
-						<DeleteIcon />
+						<EditIcon />
 					</IconButton>
 					<IconButton>
-						<EditIcon />
+						<DeleteIcon />
 					</IconButton>
 					<IconButton>
 						<DragIndicatorIcon />
 					</IconButton>
 				</div>
 			</Box>
-
 			{/* second item */}
 			<Box
 				sx={{
@@ -65,6 +65,7 @@ const BenefitCustomize = () => {
 					gap: 2,
 					bgcolor: "#f7f7f7",
 					my: 1,
+					p: 1,
 				}}
 			>
 				<HomeIcon />
@@ -76,16 +77,19 @@ const BenefitCustomize = () => {
 				</Box>
 				<div>
 					<IconButton>
-						<DeleteIcon />
+						<EditIcon />
 					</IconButton>
 					<IconButton>
-						<EditIcon />
+						<DeleteIcon />
 					</IconButton>
 					<IconButton>
 						<DragIndicatorIcon />
 					</IconButton>
 				</div>
 			</Box>
+
+			{/* edit field  */}
+			<CustomizeEditField />
 		</ThemeProvider>
 	);
 };
