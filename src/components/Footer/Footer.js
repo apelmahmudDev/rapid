@@ -6,7 +6,7 @@ import { makeStyles } from "@mui/styles";
 const useStyles = makeStyles({
 	footerBg: {
 		marginTop: "2rem",
-		height: "2rem",
+		height: "100%",
 		padding: "3rem",
 		backgroundColor: "#2A3B8F",
 		borderTopLeftRadius: "2rem",
