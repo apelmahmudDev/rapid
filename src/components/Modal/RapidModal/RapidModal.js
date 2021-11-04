@@ -2,8 +2,10 @@ import { Button, Modal, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { Box } from "@mui/system";
 import ControlPointIcon from "@mui/icons-material/ControlPoint";
-import { benefitOptions } from "../../data/benefitOptions";
+import { benefitOptions } from "../../../data/benefitOptions";
+import BenefitCustomize from "../BenefitCustomize";
 
+// custom styles
 const style = {
 	position: "absolute",
 	top: "50%",
@@ -27,12 +29,7 @@ const RapidModal = ({ open, handleClose }) => {
 	const classes = useStyles();
 
 	return (
-		<Modal
-			open={open}
-			onClose={handleClose}
-			aria-labelledby="modal-modal-title"
-			aria-describedby="modal-modal-description"
-		>
+		<Modal open={open} onClose={handleClose}>
 			<Box sx={style}>
 				<Typography id="modal-modal-title" variant="h6" component="h2">
 					Add Benefits
@@ -71,10 +68,8 @@ const RapidModal = ({ open, handleClose }) => {
 					</Box>
 				</Box>
 
-				{/* Benefits */}
-				<Typography variant="h6" component="h2">
-					Benefits
-				</Typography>
+				{/* Benefits customize chance */}
+				<BenefitCustomize />
 			</Box>
 		</Modal>
 	);

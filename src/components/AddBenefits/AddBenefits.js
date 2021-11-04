@@ -1,7 +1,7 @@
 import { Container, Button } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useState } from "react";
-import RapidModal from "../RapidModal/RapidModal";
+import RapidModal from "../Modal/RapidModal/RapidModal";
 
 const AddBenefits = () => {
 	// modal handler state & methods
