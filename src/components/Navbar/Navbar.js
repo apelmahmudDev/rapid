@@ -21,7 +21,12 @@ const Navbar = () => {
 				}}
 			>
 				{navLinks.map((link) => (
-					<Link href={`#${link.link}`} color="#666666" underline="none">
+					<Link
+						key={link.id}
+						href={`#${link.link}`}
+						color="#666666"
+						underline="none"
+					>
 						{link.name}
 					</Link>
 				))}

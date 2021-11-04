@@ -1,4 +1,4 @@
-import { Container, TextField } from "@mui/material";
+import { Container, Grid, TextField } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { Box } from "@mui/system";
 
@@ -7,9 +7,6 @@ const useStyles = makeStyles({
 	label: {
 		display: "block",
 		marginBottom: "1rem",
-	},
-	wider: {
-		width: "100%",
 	},
 	shadow: {
 		boxShadow: "rgba(99, 99, 99, 0.1) 0px 2px 8px 0px",
@@ -22,7 +19,7 @@ const RapidForm = () => {
 	return (
 		<Box
 			sx={{
-				m: 2,
+				mt: 4,
 			}}
 		>
 			<Container>
@@ -51,88 +48,76 @@ const RapidForm = () => {
 					</Box>
 
 					{/* website & industry field */}
-					<Box
-						component="div"
-						sx={{
-							display: "flex",
-							flexDirection: "row",
-							gap: 2,
-							justifyContent: "space-between",
-						}}
-					>
-						<Box component="div" className={classes.wider}>
-							<label className={classes.label}>Website</label>
-							<TextField
-								className={classes.shadow}
-								placeholder="Website (Url)"
-								fullWidth
-							/>
-						</Box>
-						<Box component="div" className={classes.wider}>
-							<label className={classes.label}>Industry*</label>
-							<TextField
-								className={classes.shadow}
-								placeholder="Employees"
-								fullWidth
-							/>
-						</Box>
-					</Box>
+					<Grid container spacing={2}>
+						<Grid item xs={12} md={6}>
+							<Box component="div">
+								<label className={classes.label}>Website</label>
+								<TextField
+									className={classes.shadow}
+									placeholder="Website (Url)"
+									fullWidth
+								/>
+							</Box>
+						</Grid>
+						<Grid item xs={12} md={6}>
+							<Box component="div">
+								<label className={classes.label}>Industry*</label>
+								<TextField
+									className={classes.shadow}
+									placeholder="Industry name"
+									fullWidth
+								/>
+							</Box>
+						</Grid>
+					</Grid>
 
 					{/* company size & Headquarters */}
-					<Box
-						component="div"
-						sx={{
-							display: "flex",
-							flexDirection: "row",
-							gap: 2,
-							justifyContent: "space-between",
-						}}
-					>
-						<Box component="div" className={classes.wider}>
-							<label className={classes.label}>Company Size*</label>
-							<TextField
-								className={classes.shadow}
-								placeholder="Employees"
-								fullWidth
-							/>
-						</Box>
-						<Box component="div" className={classes.wider}>
-							<label className={classes.label}>Headquarters</label>
-							<TextField
-								className={classes.shadow}
-								placeholder="Enter text"
-								fullWidth
-							/>
-						</Box>
-					</Box>
+					<Grid container spacing={2}>
+						<Grid item xs={12} md={6}>
+							<Box component="div">
+								<label className={classes.label}>Company Size*</label>
+								<TextField
+									className={classes.shadow}
+									placeholder="Employees"
+									fullWidth
+								/>
+							</Box>
+						</Grid>
+						<Grid item xs={12} md={6}>
+							<Box component="div">
+								<label className={classes.label}>Headquarters</label>
+								<TextField
+									className={classes.shadow}
+									placeholder="Enter text"
+									fullWidth
+								/>
+							</Box>
+						</Grid>
+					</Grid>
 
 					{/* type & founded field*/}
-					<Box
-						component="div"
-						sx={{
-							display: "flex",
-							flexDirection: "row",
-							gap: 2,
-							justifyContent: "space-between",
-						}}
-					>
-						<Box component="div" className={classes.wider}>
-							<label className={classes.label}>Type</label>
-							<TextField
-								className={classes.shadow}
-								placeholder="Enter text"
-								fullWidth
-							/>
-						</Box>
-						<Box component="div" className={classes.wider}>
-							<label className={classes.label}>Founded</label>
-							<TextField
-								className={classes.shadow}
-								placeholder="Enter year"
-								fullWidth
-							/>
-						</Box>
-					</Box>
+					<Grid container spacing={2}>
+						<Grid item xs={12} md={6}>
+							<Box component="div">
+								<label className={classes.label}>Type</label>
+								<TextField
+									className={classes.shadow}
+									placeholder="Enter text"
+									fullWidth
+								/>
+							</Box>
+						</Grid>
+						<Grid item xs={12} md={6}>
+							<Box component="div">
+								<label className={classes.label}>Founded</label>
+								<TextField
+									className={classes.shadow}
+									placeholder="Enter year"
+									fullWidth
+								/>
+							</Box>
+						</Grid>
+					</Grid>
 
 					{/* specialties field */}
 					<Box component="div">

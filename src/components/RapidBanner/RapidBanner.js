@@ -29,7 +29,7 @@ const useStyles = makeStyles({
 	logoPosition: {
 		position: "absolute",
 		top: "78%",
-		left: "3.2rem",
+		left: "2rem",
 	},
 });
 
