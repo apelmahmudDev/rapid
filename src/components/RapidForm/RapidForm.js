@@ -1,20 +1,10 @@
 import { Container, Grid, TextField } from "@mui/material";
-import { makeStyles } from "@mui/styles";
 import { Box } from "@mui/system";
-
-// custom styles
-const useStyles = makeStyles({
-	label: {
-		display: "block",
-		marginBottom: "1rem",
-	},
-	shadow: {
-		boxShadow: "rgba(99, 99, 99, 0.1) 0px 2px 8px 0px",
-	},
-});
+import TextFieldFrame, { useTextFieldStyles } from "../../Frame/TextFieldFrame";
 
 const RapidForm = () => {
-	const classes = useStyles();
+	// comes from TextFieldFrame component
+	const classes = useTextFieldStyles();
 
 	return (
 		<Box
@@ -50,72 +40,30 @@ const RapidForm = () => {
 					{/* website & industry field */}
 					<Grid container spacing={2}>
 						<Grid item xs={12} md={6}>
-							<Box component="div">
-								<label className={classes.label}>Website</label>
-								<TextField
-									className={classes.shadow}
-									placeholder="Website (Url)"
-									fullWidth
-								/>
-							</Box>
+							<TextFieldFrame label="Website" placeholder="Enter text" />
 						</Grid>
 						<Grid item xs={12} md={6}>
-							<Box component="div">
-								<label className={classes.label}>Industry*</label>
-								<TextField
-									className={classes.shadow}
-									placeholder="Industry name"
-									fullWidth
-								/>
-							</Box>
+							<TextFieldFrame label="Industry*" placeholder="Industry name" />
 						</Grid>
 					</Grid>
 
 					{/* company size & Headquarters */}
 					<Grid container spacing={2}>
 						<Grid item xs={12} md={6}>
-							<Box component="div">
-								<label className={classes.label}>Company Size*</label>
-								<TextField
-									className={classes.shadow}
-									placeholder="Employees"
-									fullWidth
-								/>
-							</Box>
+							<TextFieldFrame label="Company Size*" placeholder="Employees" />
 						</Grid>
 						<Grid item xs={12} md={6}>
-							<Box component="div">
-								<label className={classes.label}>Headquarters</label>
-								<TextField
-									className={classes.shadow}
-									placeholder="Enter text"
-									fullWidth
-								/>
-							</Box>
+							<TextFieldFrame label="Headquarters" placeholder="Enter text" />
 						</Grid>
 					</Grid>
 
 					{/* type & founded field*/}
 					<Grid container spacing={2}>
 						<Grid item xs={12} md={6}>
-							<Box component="div">
-								<label className={classes.label}>Type</label>
-								<TextField
-									className={classes.shadow}
-									placeholder="Enter text"
-									fullWidth
-								/>
-							</Box>
+							<TextFieldFrame label="Type" placeholder="Enter text" />
 						</Grid>
 						<Grid item xs={12} md={6}>
-							<Box component="div">
-								<label className={classes.label}>Founded</label>
-								<TextField
-									className={classes.shadow}
-									placeholder="Enter year"
-									fullWidth
-								/>
-							</Box>
+							<TextFieldFrame label="Founded" placeholder="Enter year" />
 						</Grid>
 					</Grid>
 
