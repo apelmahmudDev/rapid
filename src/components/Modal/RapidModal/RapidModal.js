@@ -20,9 +20,8 @@ const style = {
 };
 
 const useStyles = makeStyles({
-	benefitsBtn: {
-		fontSize: "0.7rem",
-		textTransform: "capitalize",
+	gradientBg: {
+		backgroundImage: "linear-gradient(120deg, #2D3E8B, #9396FF)",
 	},
 	modalFooterAlgn: {
 		marginTop: "2rem",
@@ -35,10 +34,19 @@ const useStyles = makeStyles({
 
 const RapidModal = ({ open, handleClose }) => {
 	const classes = useStyles();
+
 	return (
 		<Modal open={open} onClose={handleClose}>
 			<Box sx={style}>
-				<Typography id="modal-modal-title" variant="h6" component="h2">
+				<Typography
+					sx={{
+						color: "#2A3B8F",
+						pb: 1,
+						mb: 1,
+						borderBottom: "1px solid #ddd",
+					}}
+					variant="subtitle1"
+				>
 					Add Benefits
 				</Typography>
 
@@ -83,7 +91,11 @@ const RapidModal = ({ open, handleClose }) => {
 					<Button variant="outlined" sx={{ borderRadius: 16, px: 4, mx: 2 }}>
 						Back
 					</Button>
-					<Button variant="contained" sx={{ borderRadius: 16, px: 4, mx: 2 }}>
+					<Button
+						variant="contained"
+						sx={{ borderRadius: 16, px: 4, mx: 2 }}
+						className={classes.gradientBg}
+					>
 						Save
 					</Button>
 				</div>

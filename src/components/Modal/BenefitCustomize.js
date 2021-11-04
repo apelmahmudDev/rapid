@@ -23,7 +23,7 @@ const theme = createTheme({
 const BenefitCustomize = () => {
 	return (
 		<ThemeProvider theme={theme}>
-			<Typography variant="h6" component="h2">
+			<Typography sx={{ py: 1 }} variant="h6" component="h2">
 				Benefits
 			</Typography>
 			{/* first item */}
